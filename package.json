@@ -1,0 +1,23 @@
+{
+  "name": "dejtartv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinsmitnya/dejtartv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinsmitnya/dejtartv/issues"
+  },
+  "homepage": "https://github.com/martinsmitnya/dejtartv#readme",
+  "dependencies": {
+    "create-react-app": "^4.0.3"
+  }
+}
