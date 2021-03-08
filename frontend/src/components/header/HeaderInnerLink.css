@@ -1,0 +1,22 @@
+.LinkWrapper{
+  text-decoration: none;
+
+  background-color: rgb(120, 120, 120, 0.5);
+  
+  padding: 1px 10px;
+  margin: 0px 0px 0px 3px;
+  min-width: 100px;
+  border-radius: 3px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+.LinkWrapper:hover{
+  text-decoration: none;
+  background-color: rgb(120, 120, 120, 1);
+}
+
+.LinkWrapper p{
+  color: #fff;
+  font-weight: 700;
+}

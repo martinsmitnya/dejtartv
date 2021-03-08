@@ -1,6 +1,6 @@
 function About(){
     return(
-      <p>about</p>
+      <p>Admin</p>
     );
 }
 

@@ -1,12 +1,12 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
-import Home from './components/home/Home';
-import About from './components/about/About';
+import Admin from './components/admin/Admin';
+import HomePage from "./components/home/Home";
+import HirdetesPage from "./components/hirdetes/HirdetesPage";
 
 function App() {
   return (
@@ -16,10 +16,13 @@ function App() {
 
           <Switch>
             <Route exact path="/">
-              <Home />
+              <HomePage />
             </Route>
-            <Route path="/about">
-              <About />
+            <Route path="/hirdetes">
+              <HirdetesPage />
+            </Route>
+            <Route path="/admin">
+              <Admin />
             </Route>
           </Switch>
 

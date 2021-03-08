@@ -1,0 +1,22 @@
+.headerButtonWrapper{
+  background-color: rgb(120, 120, 120, 0.5);
+  cursor: pointer;
+
+  padding: 1px 10px;
+  margin: 0px 0px 0px 3px;
+  min-width: 100px;
+  border-radius: 3px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.headerButtonWrapper:hover{
+  background-color: rgb(120, 120, 120, 1);
+  cursor: pointer;
+}
+
+.headerButtonWrapper p {
+  color: #fff;
+  font-weight: 700;
+}
