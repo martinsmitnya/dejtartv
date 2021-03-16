@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import Admin from './components/admin/Admin';
 import HomePage from "./components/home/Home";
-import HirdetesPage from "./components/hirdetes/HirdetesPage";
+import Hirdetes from "./components/hirdetes/Hirdetes";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
               <HomePage />
             </Route>
             <Route path="/hirdetes">
-              <HirdetesPage />
+              <Hirdetes />
             </Route>
             <Route path="/admin">
               <Admin />
