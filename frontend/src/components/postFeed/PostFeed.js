@@ -9,7 +9,7 @@ function PostFeed() {
       type: 'video',
       title: 'Ben Award Dogehouse log',
       data: 'https://www.youtube.com/embed/ZLH1_C-UNHw',
-      description: 'Video description'
+      description: 'Video description Video description Video description Video description Video description Video description Video description Video description Video description Video description Video description Video description Video description Video description Video description Video description Video description Video description Video description Video description '
     },
     {
       type: 'text',
@@ -21,7 +21,7 @@ function PostFeed() {
       type: 'photo',
       title: 'Photo of a raven',
       data: 'https://blog.cwf-fcf.org/wp-content/uploads/2018/10/raven-flying.jpg',
-      description: 'This is a raven'
+      description: 'This is a raven This is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a raven This is a raven This is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a raven This is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a raven This is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a raven This is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a raven This is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a ravenThis is a raven'
     }
   ]);
 
@@ -31,7 +31,7 @@ function PostFeed() {
 
   if (error !== '') {
     return (<div className='postFeedWrapper'>
-      <div className='postFeedErrorMessage'>{error}</div>
+      <div className='postFeedErrorMessage'>{'Unable to acces webserver' + error}</div>
     </div>)
   } else {
     return (<div className='postFeedWrapper'>
@@ -39,7 +39,7 @@ function PostFeed() {
         content.map((element) => {
           if (element.type === 'text') {
             return (
-              <div>
+              <div className='contentWrapper'>
                 <h1 className='contentTitle'>{element.title}</h1>
                 <div className='contentData'>
                   <p>{element.data}</p>
@@ -48,23 +48,26 @@ function PostFeed() {
               </div>
             )
           }else if (element.type === 'video') {
+            let iFrameWidth = 750;
+            let iFrameHeight= iFrameWidth*0.5625;
+
             return (
-              <div>
+              <div className='contentWrapper'>
                 <h1 className='contentTitle'>{element.title}</h1>
                 <div className='contentData'>
-                  <iframe width="100%" height="100%" src={element.data} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
-                </div>
+                  <iframe width={`${iFrameWidth}px`} height={`${iFrameHeight}px`} src={element.data} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe>
                 {element.description !=='' && <p className='contentDescription'> {element.description} </p>}
+                </div>
               </div>
             )
           }else if (element.type === 'photo') {
             return (
-              <div>
+              <div className='contentWrapper'>
                 <h1 className='contentTitle'>{element.title}</h1>
                 <div className='contentData'>
                   <img width="100%" height="100%" src={element.data}></img>
-                </div>
                 {element.description !=='' && <p className='contentDescription'> {element.description} </p>}
+                </div>
               </div>
             )
           }

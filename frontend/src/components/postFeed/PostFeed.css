@@ -1,3 +1,38 @@
 .postFeedWrapper{
   border: 3px solid black;
+  width: 100%;
+}
+
+.contentWrapper{
+  border-radius: 10px;
+  border: darkblue solid 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px 10px 20px; 
+  margin: 2%;
+}
+
+.contentTitle{
+  margin: 3px;
+}
+
+.contentData{
+
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+.contentData p{
+  margin: 0;
+  padding: 10px 0;
+}
+.contentData iframe{
+  border: 0px solid black;
+  /* width: FROM SCRIPT
+  height: FROM SCRIPT */
+
+}
+
+.contentDescription{
+  margin: 20px 0 0 0;
 }
