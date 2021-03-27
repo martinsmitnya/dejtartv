@@ -6,6 +6,7 @@ import {
 import Admin from './components/admin/Admin';
 import HomePage from "./components/home/Home";
 import Hirdetes from "./components/hirdetes/Hirdetes";
+import PostFeed from "./components/postFeed/PostFeed"
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           <Switch>
             <Route exact path="/">
               <HomePage />
+            </Route>
+            <Route exact path="/postFeed">
+              <PostFeed />
             </Route>
             <Route path="/hirdetes">
               <Hirdetes />
