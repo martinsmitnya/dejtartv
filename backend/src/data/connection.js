@@ -1,5 +1,4 @@
 import mysql from 'mysql';
-
 import config from '../config';
 
 var pool = mysql.createPool({
@@ -14,13 +13,10 @@ export const db = {
   query(query, values) {
     return new Promise((resolve, reject) => {
       pool.query(query, values, (err, results, fields) => {
-        console.log(config);
         if (err) {
           reject(err);
-
           return;
         }
-
         resolve({ results, fields });
       });
     });
