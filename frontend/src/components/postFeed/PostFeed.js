@@ -25,9 +25,12 @@ function PostFeed() {
     }
   ]);
 
-  // fetch('/posts').then(response => response.json())
-  // .then(data => setContent(data))
-  // .catch(error => setError(error))
+  useEffect(()=>{
+    fetch('http://localhost:8080/posts').then(response => response.json())
+    .then(data => setContent(data))
+    .catch(error => setError(error))
+    return
+  }, []);
 
   if (error !== '') {
     return (<div className='postFeedWrapper'>
