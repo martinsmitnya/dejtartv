@@ -25,19 +25,19 @@ function PostFeed() {
     }
   ]);
 
-  useEffect(()=>{
-    fetch('http://localhost:8080/posts').then(response => response.json())
-    .then(data => setContent(data))
-    .catch(error => setError(error))
-    return
-  }, []);
+  // useEffect(()=>{
+  //   fetch('http://localhost:8080/posts').then(response => response.json())
+  //   .then(data => setContent(data))
+  //   .catch(error => setError(error))
+  //   return
+  // }, []);
 
   if (error !== '') {
     return (<div className='postFeedWrapper'>
       <div className='postFeedErrorMessage'>{'Unable to acces webserver' + error}</div>
     </div>)
   } else {
-    return (<div className='postFeedWrapper'>
+    return (<div className='postsWrapper'>
       {
         content.map((element) => {
           if (element.type === 'text') {
@@ -51,7 +51,7 @@ function PostFeed() {
               </div>
             )
           }else if (element.type === 'video') {
-            let iFrameWidth = 750;
+            let iFrameWidth = 440;
             let iFrameHeight= iFrameWidth*0.5625;
 
             return (

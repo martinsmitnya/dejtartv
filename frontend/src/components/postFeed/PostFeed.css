@@ -1,15 +1,16 @@
-.postFeedWrapper{
-  border: 3px solid black;
+.postsWrapper{
+  /* border: 3px solid black; */
   width: 100%;
 }
 
 .contentWrapper{
-  border-radius: 10px;
-  border: darkblue solid 10px;
+  /* border-radius: 10px; */
+  border: rgb(0, 0, 0) solid 1px;
   display: flex;
   flex-direction: column;
   padding: 10px 20px 10px 20px; 
-  margin: 2%;
+  margin: 1%;
+  background: linear-gradient(rgb(51, 51, 51), black);
 }
 
 .contentTitle{
@@ -17,14 +18,14 @@
 }
 
 .contentData{
-
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   width: fit-content;
 }
 .contentData p{
   margin: 0;
   padding: 10px 0;
+
 }
 .contentData iframe{
   border: 0px solid black;
@@ -32,7 +33,15 @@
   height: FROM SCRIPT */
 
 }
+.contentData img{
+  border: 0px solid black;
+  width: 440px;
+
+}
 
 .contentDescription{
-  margin: 20px 0 0 0;
+  margin: 0;
+  padding: 0;
+  color: white;
+  width: 50%;
 }

@@ -5,11 +5,31 @@
     border: none;
 }
 
-.videoWrapper{
+.openingSection{
+    display: flex;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
     width: 100%;
+    border: none;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+.videoWrapper{
+    margin: 0;
+    padding: 0;
+    width: 49%;
     height: 93.1vh;
+}
+
+.homePostFeedWrapper{
+    margin: 0;
+    padding: 0;
+    width: 49%;
+    height: 93.1vh;
+    background-color: darkgreen;
+    border: none;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 900px){
