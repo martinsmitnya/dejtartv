@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-function About(){
+function Kapcsolat(){
     return(
-      <p>Admin</p>
+      <p>Kapcsolat</p>
     );
 }
 
-export default About;
+export default Kapcsolat;

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-function About(){
+function Adomanyok(){
     return(
-      <p>Admin</p>
+      <p>Adomanyok</p>
     );
 }
 
-export default About;
+export default Adomanyok;

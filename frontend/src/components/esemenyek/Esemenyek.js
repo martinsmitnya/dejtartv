@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-function About(){
+function Esemenyek(){
     return(
-      <p>Admin</p>
+      <p>Esemenyek</p>
     );
 }
 
-export default About;
+export default Esemenyek;
