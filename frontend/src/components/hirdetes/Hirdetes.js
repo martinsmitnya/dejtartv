@@ -1,11 +1,18 @@
 import './Hirdetes.css'
+import React, { useEffect, useState } from 'react';
 
 function Hirdetes(props) {
-  let source = 'https://docs.google.com/document/d/e/2PACX-1vSZUttIUpN-HXQOru310Pupkc5EmXAz6dTqXou4DTQqOcjlGHBr7m9yfgIxQPcRPQ9Hugh8pLnyRNnS/pub?embedded=true'
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    fetch().then(response => response.json()).then(data => {
+      //setData in any way
+    }).catch(error => setError(error))
+  }, [])
+
   return (
-    <div className='hirdetesWrapper'>
-      <h1 className='hirdetesTitle'>Hirdetés</h1>
-      <iframe className='embededDocument' src={source}></iframe>
+    <div className='hirdetesMain'>
+      <img src="https://docs.google.com/drawings/d/e/2PACX-1vSvLHs4B3Euxpe4M5kNL96EtE6wi44GVAkCsnQ7L47JfWoYEieZGsuegKJLZu_usJT8c-BEiE3kgCwW/pub?w=1866&amp;h=801" />
     </div>
   );
 }
